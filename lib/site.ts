@@ -5,7 +5,7 @@ export const site = {
   description:
     "Hontec builds production software for growing companies — our own products in workflow, document management and analytics, plus custom engineering teams for web, mobile, cloud and AI.",
   url: "https://www.hontec.in",
-  email: "hontec.in@gmail.com",
+  email: "business.hontec@gmail.com",
 remote: true,
   address: {
     line1: "Hontec",
