@@ -78,10 +78,6 @@ export function Footer() {
               <Link href={site.social.x} className="text-white/55 hover:text-white text-[0.82rem]">
                 X
               </Link>
-              <span className="text-white/20">·</span>
-              <Link href={site.social.github} className="text-white/55 hover:text-white text-[0.82rem]">
-                GitHub
-              </Link>
             </div>
           </div>
 
