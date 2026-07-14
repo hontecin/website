@@ -101,7 +101,6 @@ const orgJsonLd = {
       "@type": "ContactPoint",
       contactType: "sales",
       email: site.email,
-      telephone: site.phone,
       areaServed: ["IN", "US", "EU", "AE", "SG"],
       availableLanguage: ["English"],
     },
