@@ -16,9 +16,8 @@ remote: true,
     country: "India",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/hontec",
+    linkedin: "https://www.linkedin.com/company/hontecindia",
     x: "https://x.com/hontec",
-    github: "https://github.com/hontec",
   },
   foundedYear: 2019,
   founders: [
