@@ -57,7 +57,7 @@ export function Footer() {
       <div className="container-x py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-4">
-            <Logo variant="paper" />
+            <Logo variant="paper" size="lg" />
             <p className="mt-5 text-[0.95rem] leading-relaxed text-white/65 max-w-sm">
               Software that takes work off your team&apos;s plate. We build our
               own products, and we build custom systems alongside your engineers.
@@ -66,10 +66,7 @@ export function Footer() {
               <a href={`mailto:${site.email}`} className="hover:text-white">
                 {site.email}
               </a>
-              <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="hover:text-white">
-                {site.phone}
-              </a>
-              <span className="text-white/45 text-[0.82rem] mt-1">
+<span className="text-white/45 text-[0.82rem] mt-1">
                 Remote-first · Based in {site.address.city}, {site.address.region}, India
               </span>
             </div>
