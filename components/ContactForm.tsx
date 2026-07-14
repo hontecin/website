@@ -25,18 +25,25 @@ const timing = ["This quarter", "Next quarter", "In the next 6 months", "Explori
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [intent, setIntent] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    const data = new FormData(e.currentTarget);
+    data.append("access_key", "33fa44a1-82c4-4458-b531-4af992f7fe9f");
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    });
+    setSubmitting(false);
+    if (res.ok) setSubmitted(true);
+  }
 
   return (
     <form
       className="card p-7 md:p-8 grid gap-5"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitting(true);
-        setTimeout(() => {
-          setSubmitting(false);
-          setSubmitted(true);
-        }, 600);
-      }}
+      onSubmit={handleSubmit}
     >
       {submitted ? (
         <div className="py-8 text-center">
@@ -67,12 +74,19 @@ export function ContactForm() {
             </Field>
           </div>
           <Field label="What can we help with?" required>
-            <select className="input" name="intent" required defaultValue="">
+            <select className="input" name="intent" required defaultValue="" onChange={e => setIntent(e.target.value)}>
               <option value="" disabled>Pick one</option>
               {intents.map(i => <option key={i.value} value={i.value}>{i.label}</option>)}
             </select>
           </Field>
-          <div className="grid sm:grid-cols-2 gap-5">
+          {intent === "careers" && (
+            <div className="rounded-xl border border-line bg-line-2 px-4 py-3 text-sm text-ink-3">
+              For careers, please email us directly at{" "}
+              <a href="mailto:business.hontec@gmail.com" className="text-ink underline">business.hontec@gmail.com</a>{" "}
+              with your CV.
+            </div>
+          )}
+          {intent !== "careers" && <><div className="grid sm:grid-cols-2 gap-5">
             <Field label="Indicative budget">
               <select className="input" name="budget" defaultValue="">
                 <option value="" disabled>Pick one (optional)</option>
@@ -98,7 +112,7 @@ export function ContactForm() {
           </button>
           <p className="text-xs text-mute">
             By submitting you agree to our <a href="/privacy" className="underline">privacy notice</a>. We don&rsquo;t share form submissions with anyone.
-          </p>
+          </p></>}
         </>
       )}
 

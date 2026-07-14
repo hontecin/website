@@ -31,11 +31,7 @@ export default function ContactPage() {
                   <div className="text-mute text-xs uppercase tracking-[0.12em]">New business</div>
                   <a className="font-medium text-ink hover:underline" href={`mailto:${site.email}`}>{site.email}</a>
                 </li>
-                <li>
-                  <div className="text-mute text-xs uppercase tracking-[0.12em]">Phone</div>
-                  <a className="font-medium text-ink hover:underline" href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
-                </li>
-                <li>
+<li>
                   <div className="text-mute text-xs uppercase tracking-[0.12em]">Where we work from</div>
                   <p className="text-ink-3 leading-relaxed">
                     Remote-first across India.<br />
