@@ -82,7 +82,7 @@ export function ContactForm() {
           {intent === "careers" && (
             <div className="rounded-xl border border-line bg-line-2 px-4 py-3 text-sm text-ink-3">
               For careers, please email us directly at{" "}
-              <a href="mailto:business.hontec@gmail.com" className="text-ink underline">business.hontec@gmail.com</a>{" "}
+              <a href="mailto:careers.hontec@gmail.com" className="text-ink underline">careers.hontec@gmail.com</a>{" "}
               with your CV.
             </div>
           )}
