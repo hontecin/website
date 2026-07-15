@@ -1,9 +1,9 @@
 export const site = {
   name: "Hontec",
   legalName: "Hontec Technologies",
-  tagline: "Software that takes work off your team's plate.",
+  tagline: "Technology that empowers every business.",
   description:
-    "Hontec builds production software for growing companies — our own products in workflow, document management and analytics, plus custom engineering teams for web, mobile, cloud and AI.",
+    "Hontec is an IT company based in India, building software products and custom solutions for businesses of all sizes — including Pharmacare, modern pharmacy management software.",
   url: "https://www.hontec.in",
   email: "business.hontec@gmail.com",
 remote: true,
@@ -17,9 +17,10 @@ remote: true,
   },
   social: {
     linkedin: "https://www.linkedin.com/company/hontecindia",
-    x: "https://x.com/hontec",
+    x: "https://x.com/hontecin",
+    instagram: "https://www.instagram.com/hontec.in/",
   },
-  foundedYear: 2019,
+  foundedYear: 2024,
   founders: [
     { name: "Jagdish Parmar", role: "Co-founder & CEO" },
     { name: "Shubham Raiyani", role: "Co-founder & CTO" },
@@ -30,14 +31,12 @@ export type NavItem = { label: string; href: string; description?: string };
 export type NavGroup = { label: string; href?: string; items?: NavItem[] };
 
 export const nav: NavGroup[] = [
+  { label: "Home", href: "/" },
   {
     label: "Products",
     href: "/products",
     items: [
-      { label: "Pharmacare", href: "https://pharmacare.hontec.in", description: "Healthcare supply network — manufacturer to patient." },
-      { label: "Flow", href: "/products/flow", description: "Workflow & approvals for ops teams." },
-      { label: "Vault", href: "/products/vault", description: "Secure document management for regulated work." },
-      { label: "Lens", href: "/products/lens", description: "Operational analytics for mid-market teams." },
+      { label: "Pharmacare", href: "https://pharmacare.hontec.in", description: "Modern pharmacy billing, inventory & management software." },
     ],
   },
   {
@@ -52,7 +51,6 @@ export const nav: NavGroup[] = [
     ],
   },
   { label: "Industries", href: "/industries" },
-  { label: "Work", href: "/work" },
   {
     label: "Company",
     items: [
@@ -68,78 +66,21 @@ export const products = [
   {
     slug: "pharmacare",
     name: "Pharmacare",
-    tagline: "The healthcare supply network — manufacturer to patient.",
+    tagline: "Modern pharmacy billing, inventory & management software.",
     summary:
-      "One network connecting manufacturers, distributors, pharmacies and patients. Real-time inventory and orders across the chain, e-prescription handling, recalls in hours not weeks, and a consumer storefront sitting on top of it all.",
+      "Pharmacare handles the daily operations of a pharmacy — fast billing, stock tracking, expiry alerts, purchase orders, and sales reports — all in one place. Built for Indian retail pharmacies who want to move off manual registers and spreadsheets.",
     accent: "from-cyan-500/15 to-cyan-500/0",
     external: "https://pharmacare.hontec.in",
     bullets: [
-      "Connects manufacturers, distributors, pharmacies and consumers on one ledger",
-      "Real-time inventory, orders and settlements across every tier",
-      "E-prescription, refill and adherence flows for retail pharmacies",
-      "Consumer storefront ready out of the box, with cold-chain delivery support",
+      "Fast billing with barcode scanning and GST-ready invoices",
+      "Real-time stock levels, low-stock alerts and expiry tracking",
+      "Purchase order management and supplier records",
+      "Daily, weekly and monthly sales reports at a glance",
     ],
     metrics: [
-      { value: "4 tiers", label: "of the supply chain on one network" },
-      { value: "<2 hrs", label: "recall reach, manufacturer to last bottle" },
-      { value: "DPDP-ready", label: "data residency in India, by default" },
-    ],
-  },
-  {
-    slug: "flow",
-    name: "Flow",
-    tagline: "Workflow & approvals for operations teams.",
-    summary:
-      "Build approval chains, request forms and SLA-tracked work queues without touching a workflow engine — visually, in an afternoon.",
-    accent: "from-orange-500/15 to-orange-500/0",
-    bullets: [
-      "Drag-and-drop workflow builder with branches, parallel paths and SLAs",
-      "Slack, Teams, email and webhook actions out of the box",
-      "Audit log and role-based approvals fit for regulated processes",
-      "REST + webhook API for embedding into existing systems",
-    ],
-    metrics: [
-      { value: "73%", label: "drop in approval cycle time, avg." },
-      { value: "9 hrs", label: "to first workflow in production" },
-      { value: "120+", label: "pre-built actions" },
-    ],
-  },
-  {
-    slug: "vault",
-    name: "Vault",
-    tagline: "Secure document management for regulated work.",
-    summary:
-      "Versioned, e-signature-ready document storage with granular access, retention policies, and audit trails — built for finance, healthcare and legal teams.",
-    accent: "from-zinc-900/10 to-zinc-900/0",
-    bullets: [
-      "Versioning, redlining and electronic signature",
-      "Field-level access controls and watermarking",
-      "Retention policies aligned with ISO 27001 and SOC 2 controls",
-      "Connectors for SharePoint, Google Drive, S3 and box",
-    ],
-    metrics: [
-      { value: "AES-256", label: "at-rest encryption, customer-managed keys" },
-      { value: "11 yrs", label: "max retention windows supported" },
-      { value: "99.95%", label: "uptime, contractual" },
-    ],
-  },
-  {
-    slug: "lens",
-    name: "Lens",
-    tagline: "Operational analytics for mid-market teams.",
-    summary:
-      "Pre-built dashboards for sales, ops, finance and support — connect your warehouse or operational DB and get answers, not a BI project.",
-    accent: "from-emerald-500/10 to-emerald-500/0",
-    bullets: [
-      "Connectors for Postgres, MySQL, BigQuery, Snowflake and Redshift",
-      "Pre-modelled metrics for sales, ops, finance and CX",
-      "Embedded analytics with row-level security for customer-facing reporting",
-      "Scheduled reports to Slack, email, and Drive",
-    ],
-    metrics: [
-      { value: "40+", label: "starter dashboards" },
-      { value: "<3 wks", label: "to a dashboard your CFO uses" },
-      { value: "SOC 2", label: "Type II, audited annually" },
+      { value: "< 30 sec", label: "to generate a GST invoice" },
+      { value: "Zero", label: "manual stock register needed" },
+      { value: "English", label: "interface language" },
     ],
   },
 ] as const;
@@ -148,7 +89,7 @@ export const services = [
   {
     slug: "web-platforms",
     name: "Web platforms",
-    short: "Customer-facing and internal web apps engineered for the next three years, not the next sprint.",
+    short: "Web apps built to scale — fast, reliable, and made to last.",
     points: [
       "Next.js, React, TypeScript front-ends with design systems that scale",
       "Node, Go and Python services with measurable SLOs",
@@ -159,7 +100,7 @@ export const services = [
   {
     slug: "mobile-apps",
     name: "Mobile apps",
-    short: "iOS, Android and cross-platform builds shipped to the stores, not just demoed.",
+    short: "iOS, Android and cross-platform apps shipped to the stores.",
     points: [
       "Swift, Kotlin and React Native depending on what your users actually need",
       "Offline-first sync, push notifications, deep links",
@@ -170,7 +111,7 @@ export const services = [
   {
     slug: "cloud-devops",
     name: "Cloud & DevOps",
-    short: "Migrate, modernise, or just stop the 2am pages — AWS, Azure and GCP.",
+    short: "Cloud migration and DevOps on AWS, Azure and GCP.",
     points: [
       "Lift-and-shift, replatforming and full re-architecture programs",
       "Terraform, Pulumi and CDK — infrastructure as code, reviewed like code",
@@ -181,7 +122,7 @@ export const services = [
   {
     slug: "ai",
     name: "AI integration",
-    short: "LLMs and ML built into real workflows — measured by business outcome, not demo wow.",
+    short: "AI and ML integrated into your real business workflows.",
     points: [
       "Retrieval augmented generation with eval harnesses, not vibes",
       "Fine-tuning and small-model deployment for cost and latency",
@@ -192,7 +133,7 @@ export const services = [
   {
     slug: "teams",
     name: "Product engineering teams",
-    short: "Dedicated squads — engineering, design, PM — embedded into your delivery rhythm.",
+    short: "Dedicated engineering squads embedded into your team.",
     points: [
       "Squads of 3–9, billed monthly, scaled up or down with 30 days' notice",
       "Time zone overlap with EU, US East and APAC clients",

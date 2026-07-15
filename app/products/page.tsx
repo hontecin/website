@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Arrow, CTAStrip, PageHeader, Section, SectionHead } from "@/components/ui";
+import { Arrow, CTAStrip, PageHeader, Section } from "@/components/ui";
 import { products } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Products — Pharmacare, Flow, Vault, Lens",
+  title: "Products — Pharmacare",
   description:
-    "Four products built by Hontec for problems we kept seeing — fragmented pharmacy supply chains, approvals stuck in inboxes, documents scattered across drives, and operational data trapped in CSVs.",
+    "Pharmacare by Hontec — the healthcare supply network connecting manufacturers, distributors, pharmacies and patients on one platform.",
   alternates: { canonical: "/products" },
 };
 
@@ -15,14 +15,14 @@ export default function ProductsIndex() {
     <>
       <PageHeader
         eyebrow="Products"
-        title="Four tools, built by us, for problems we kept seeing."
-        lede="Each Hontec product replaces a category of work — approvals, document control, or operational reporting — that mid-market and enterprise teams burn weeks on. Buy what you need; no all-in-one bundle."
+        title="Pharmacare — modern pharmacy management software."
+        lede="Billing, inventory, purchase orders, and reports — everything a retail pharmacy needs to run without paperwork. GST-ready, English interface, built for India."
       >
-        <Link href="/contact?type=demo" className="btn btn-primary">
-          Book a 30-minute walkthrough <Arrow />
+        <Link href="https://pharmacare.hontec.in" className="btn btn-primary" target="_blank" rel="noopener">
+          Visit Pharmacare <Arrow />
         </Link>
-        <Link href="#compare" className="btn btn-ghost">
-          Compare the three
+        <Link href="/contact?type=demo" className="btn btn-ghost">
+          Book a walkthrough
         </Link>
       </PageHeader>
 
@@ -75,51 +75,9 @@ export default function ProductsIndex() {
         </div>
       </Section>
 
-      <Section id="compare" className="bg-paper border-y border-line">
-        <div className="container-x">
-          <SectionHead
-            eyebrow="Compare"
-            title="Which product fits your team?"
-            lede="A 90-second comparison. Most teams start with one and add a second within six months."
-          />
-
-          <div className="mt-12 overflow-x-auto">
-            <table className="w-full text-left border border-line bg-white rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-paper">
-                  <th className="p-5 text-sm font-medium text-mute w-1/4">&nbsp;</th>
-                  {products.map((p) => (
-                    <th key={p.slug} className="p-5 text-base font-semibold tracking-tight">
-                      {p.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {[
-                  ["Built for", ["Pharma supply chain & consumers", "Operations & approvals", "Compliance & legal teams", "Finance & leadership"]],
-                  ["Time to first value", ["~4 weeks", "~9 hours", "~2 weeks", "~3 weeks"]],
-                  ["Hosting", ["SaaS, India region", "SaaS / VPC / on-prem", "SaaS / VPC / on-prem", "SaaS / VPC"]],
-                  ["Data residency", ["India, DPDP-aligned", "Region of choice", "Region of choice", "Region of choice"]],
-                  ["Audit log retention", ["7 years", "7 years", "11 years", "5 years"]],
-                  ["Starts at", ["₹ on request", "₹ on request", "₹ on request", "₹ on request"]],
-                ].map(([label, vals]) => (
-                  <tr key={label as string} className="border-t border-line">
-                    <td className="p-5 font-medium align-top">{label}</td>
-                    {(vals as string[]).map((v, i) => (
-                      <td key={i} className="p-5 text-ink-3 align-top">{v}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </Section>
-
       <CTAStrip
-        title="Want to see one running on your data?"
-        lede="Send us a sample workflow, document set, or BI question. We'll wire it up in our sandbox and walk you through it on a call."
+        title="Want to see Pharmacare running?"
+        lede="Book a walkthrough and we'll show you the full supply chain — manufacturer to patient — live in our sandbox."
       />
     </>
   );

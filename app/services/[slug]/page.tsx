@@ -174,11 +174,8 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   return (
     <>
       <PageHeader eyebrow={`Services · ${s.name}`} title={s.short} lede={d.lede}>
-        <Link href="/contact?type=brief" className="btn btn-primary">
-          Brief us <Arrow />
-        </Link>
-        <Link href="/work" className="btn btn-ghost">
-          See related work
+        <Link href="/contact" className="btn btn-primary">
+          Get in touch <Arrow />
         </Link>
       </PageHeader>
 
