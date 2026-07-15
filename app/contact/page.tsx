@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Tell us what you&rsquo;re trying to ship."
-        lede="A real person reads every form. We&rsquo;ll come back inside two working days with people, a plan, or both. NDAs go out same-day on request."
+        lede="A real person reads every form. We&rsquo;ll come back inside two working days with people, a plan, or both."
       />
 
       <Section>
@@ -41,15 +41,6 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="card p-7 mt-6">
-              <Eyebrow>For a quick read</Eyebrow>
-              <ul className="mt-5 grid gap-3 text-[0.92rem] text-ink-3">
-                <li><strong className="text-ink">Reply time:</strong> &lt;2 working days, every time.</li>
-                <li><strong className="text-ink">NDAs:</strong> our standard mutual NDA, sent same-day.</li>
-                <li><strong className="text-ink">Time zones:</strong> overlap windows for SF, NY, LDN, DXB, SIN.</li>
-                <li><strong className="text-ink">Languages:</strong> English. Pitch decks also in Hindi or Tamil on request.</li>
-              </ul>
-            </div>
           </div>
         </div>
       </Section>

@@ -10,10 +10,6 @@ const cols = [
     heading: "Products",
     links: [
       { label: "Pharmacare", href: "https://pharmacare.hontec.in" },
-      { label: "Flow", href: "/products/flow" },
-      { label: "Vault", href: "/products/vault" },
-      { label: "Lens", href: "/products/lens" },
-      { label: "All products", href: "/products" },
     ],
   },
   {
@@ -40,7 +36,6 @@ const cols = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Work", href: "/work" },
       { label: "Careers", href: "/careers" },
       { label: "Insights", href: "/insights" },
       { label: "Contact", href: "/contact" },
@@ -59,8 +54,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo variant="paper" size="lg" />
             <p className="mt-5 text-[0.95rem] leading-relaxed text-white/65 max-w-sm">
-              Software that takes work off your team&apos;s plate. We build our
-              own products, and we build custom systems alongside your engineers.
+              Technology that empowers every business. We build software
+              products and custom solutions for businesses of all sizes.
             </p>
             <div className="mt-6 flex flex-col gap-1 text-[0.88rem] text-white/65">
               <a href={`mailto:${site.email}`} className="hover:text-white">
@@ -77,6 +72,10 @@ export function Footer() {
               <span className="text-white/20">·</span>
               <Link href={site.social.x} className="text-white/55 hover:text-white text-[0.82rem]">
                 X
+              </Link>
+              <span className="text-white/20">·</span>
+              <Link href={site.social.instagram} className="text-white/55 hover:text-white text-[0.82rem]">
+                Instagram
               </Link>
             </div>
           </div>

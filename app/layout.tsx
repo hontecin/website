@@ -95,7 +95,7 @@ const orgJsonLd = {
   alternateName: site.name,
   url: site.url,
   logo: `${site.url}/icon`,
-  sameAs: [site.social.linkedin, site.social.x],
+  sameAs: [site.social.linkedin, site.social.x, site.social.instagram],
   contactPoint: [
     {
       "@type": "ContactPoint",

@@ -27,13 +27,13 @@ export default function CareersPage() {
         <div className="container-x grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
             <Eyebrow>How we work</Eyebrow>
-            <h2 className="h-section mt-4 text-balance">Senior-led, written-down, no theatre.</h2>
+            <h2 className="h-section mt-4 text-balance">Small team, real ownership, no theatre.</h2>
             <ul className="mt-8 grid gap-5">
               {[
                 "You will own the work, not just execute on tickets. We hire people whose judgement we trust.",
-                "A founder is on every engagement of consequence. You&rsquo;ll never be the most senior person in the room by default.",
-                "Decisions are written down. ADRs, design docs, post-mortems. The &lsquo;why&rsquo; from two months ago is still findable.",
-                "We say no to bad-fit work. We&rsquo;d rather turn down a client than burn the team on work that doesn&rsquo;t matter.",
+                "You work directly with the people making decisions — no layers between you and the outcome.",
+                "Decisions are written down, so the &lsquo;why&rsquo; from two months ago is still findable.",
+                "We say no to bad-fit work. We&rsquo;d rather turn down a project than burn the team on work that doesn&rsquo;t matter.",
                 "Remote-first from day one. We care about output, not office hours.",
                 "Honest feedback, given quickly. No annual review surprises.",
               ].map((b) => (
@@ -65,7 +65,7 @@ export default function CareersPage() {
           <SectionHead
             eyebrow="Life at Hontec"
             title="What it actually feels like to work here."
-            lede="We&rsquo;re a small, founder-led studio. That means fewer layers, more ownership, and work that ships to real users."
+            lede="We&rsquo;re a small, young company. That means fewer layers, more ownership, and work that ships to real users."
           />
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {[
@@ -78,20 +78,20 @@ export default function CareersPage() {
                 body: "Everyone here has a real voice. When you raise a concern or suggest a better approach, it gets discussed — not filed away. Small means your work actually moves the company.",
               },
               {
-                title: "Real problems, real clients",
-                body: "We work with banks, hospital networks, and global retailers. The problems are hard, the stakes are real, and the software runs in production — not in a demo environment.",
+                title: "Real problems, real users",
+                body: "Our software runs in real businesses — Pharmacare is used by pharmacies for their daily billing and stock. What you build here goes to production and gets used, not parked in a demo environment.",
               },
               {
                 title: "No bureaucracy",
-                body: "Two founders, no middle management layer. Decisions get made quickly. If something is broken, you can fix it without a committee.",
+                body: "A small team with no middle management layer. Decisions get made quickly. If something is broken, you can fix it without a committee.",
               },
               {
                 title: "Learning baked in",
                 body: "We write ADRs, run post-mortems, and talk openly about what didn&rsquo;t work. Getting better at the craft is part of the job description.",
               },
               {
-                title: "Quarterly meetups",
-                body: "The team comes together in Vadodara every quarter — fully expensed. Time to think together, talk through the roadmap, and spend time with people you usually only see on a call.",
+                title: "Grow with the company",
+                body: "We started in 2024 and we&rsquo;re building for the long term. Joining early means your work shapes the products, the culture, and the direction of the company.",
               },
             ].map((item) => (
               <div key={item.title} className="card p-7">

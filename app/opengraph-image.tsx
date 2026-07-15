@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Hontec — Software that takes work off your team's plate.";
+export const alt = "Hontec — Technology that empowers every business.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -55,7 +55,7 @@ export default async function OG() {
               maxWidth: 980,
             }}
           >
-            Software that takes work off your team&apos;s plate.
+            Technology that empowers every business.
           </div>
         </div>
 

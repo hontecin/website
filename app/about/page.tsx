@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Hontec",
-  description: "Hontec is a remote-first product and engineering company based in Vadodara, India. We build software for operations, compliance and finance teams — and dedicated engineering squads for the differentiated parts of your stack.",
+  description: "Hontec is an IT company founded in 2024, based in Vadodara, India. We build software products and custom engineering solutions for businesses of all sizes.",
   alternates: { canonical: "/about" },
 };
 
@@ -14,29 +14,27 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="Founder-led. Remote-first. Senior bench."
-        lede="Hontec is a remote-first studio headquartered in Vadodara. The founders, Jagdish Parmar and Shubham Raiyani, work alongside a hand-picked freelance bench of senior engineers, designers and product folk. We make a small number of promises on every engagement, and we ship them."
+        title="Built in India. Here to stay."
+        lede="Hontec is an IT company founded in 2024 and headquartered in Vadodara, Gujarat. We build software products and custom engineering solutions for businesses of all sizes — with a simple goal: make powerful software accessible to every business."
       />
 
       <Section>
         <div className="container-x grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-6">
             <Eyebrow>Where we&rsquo;re from</Eyebrow>
-            <h2 className="h-section mt-4 text-balance">Started in Vadodara, built remote-first by engineers tired of vendor theatre.</h2>
+            <h2 className="h-section mt-4 text-balance">Started in Vadodara in 2024, with a clear mission from day one.</h2>
             <div className="mt-6 grid gap-5 text-ink-3 leading-relaxed">
-              <p>Jagdish Parmar and Shubham Raiyani spent their first decade in industry on opposite sides of the same problem — Jagdish on the product and engineering management side, Shubham deep in systems and architecture. They kept comparing notes on what was wrong with the software their employers were buying.</p>
-              <p>The pattern they kept finding: the people on the pitch were not the people on the project. The CV bench was a marketing artefact. The codebase by month six was a stranger&rsquo;s. They thought there was room for a firm that ran services the way product companies run engineering — senior bench, high tenure, the engineer in the standup is the engineer in the codebase.</p>
-              <p>So they started Hontec in Vadodara, remote-first from day one. The product line grew from there — Flow, Vault and Lens for operations, compliance and finance teams, and Pharmacare for India&rsquo;s pharma supply chain — each built after they kept seeing the same problems show up in engagement after engagement. They built their own answers, sold them, and used the revenue to fund longer engineering bets and a senior bench other firms can&rsquo;t.</p>
+              <p>Hontec started in 2024 with one idea: good software should not be out of reach for small and mid-sized businesses in India. Too often the tools available were either too expensive, too complex, or simply not built for how Indian businesses actually work.</p>
+              <p>Our first product, Pharmacare, came from a direct observation — retail pharmacies in India were still running on manual registers and spreadsheets. We built a modern billing, inventory and management solution for them: GST-ready, simple to use, and priced for a small business.</p>
+              <p>Custom engineering services run alongside the product — helping businesses build the software they need when an off-the-shelf solution isn&rsquo;t the right answer. Same team, same standards, same honest approach.</p>
             </div>
           </div>
           <div className="lg:col-span-6">
             <div className="card p-8 grid grid-cols-2 gap-y-10 gap-x-6">
-              <Stat value="100%" label="Promises kept on every engagement" />
-              <Stat value="<2 days" label="Reply on every brief, weekends excluded" />
-              <Stat value="Senior" label="Only engineers we&rsquo;d hire ourselves" />
-              <Stat value="Remote" label="Delivered globally from India" />
-              <Stat value="3" label="Products in commercial use" />
-              <Stat value="2019" label="Founded in Vadodara" />
+              <Stat value="2024" label="Founded in Vadodara, Gujarat" />
+              <Stat value="1" label="Product live — Pharmacare" />
+              <Stat value="India" label="Built for Indian businesses first" />
+              <Stat value="Remote" label="Delivered from anywhere in India" />
             </div>
           </div>
         </div>
@@ -51,28 +49,28 @@ export default function AboutPage() {
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             {[
               {
-                t: "The engineer is the proposal.",
-                d: "If we can&rsquo;t name and staff the principals on a deck, we walk away from it. The CV bench is not a marketing artefact.",
+                t: "Simple is hard. We do simple.",
+                d: "Every product we build is judged first on whether a non-technical user can pick it up and get value in minutes. Complexity is easy. Simplicity takes discipline.",
               },
               {
-                t: "Boring tech, picked on purpose.",
-                d: "We&rsquo;ve had the latest-and-greatest era. We pick stacks our clients can hire for in five years and we say no to ones we don&rsquo;t love.",
+                t: "Built for India, not adapted for India.",
+                d: "GST, Indian banking, local workflows — these are first-class requirements, not afterthoughts. We build from the ground up for how Indian businesses actually operate.",
               },
               {
-                t: "Security taken seriously, honestly.",
-                d: "DPAs, BAAs, NDAs and customer-managed keys are part of every SOW. We&rsquo;re upfront about where we are on SOC 2 and ISO 27001 — we&rsquo;ll show you our current posture, not pretend to a certification we don&rsquo;t have.",
+                t: "Honest about what we can do.",
+                d: "We're a young company. We'll tell you what we can build well right now and what we can't — no inflated promises, no pretending to experience we don't have.",
               },
               {
-                t: "Transition out by default.",
-                d: "Every engagement has a written transition-out plan and a hire-out schedule for our engineers. We&rsquo;d rather you take it in-house in year two than resent us in year three.",
+                t: "Own the problem, not just the code.",
+                d: "When we take on a project, we think about your users and your business, not just the spec. The best outcome is software that actually solves the problem.",
               },
               {
-                t: "We&rsquo;ll talk you out of work we don&rsquo;t love.",
-                d: "Most of our best client relationships started with a &lsquo;don&rsquo;t build this&rsquo; in week two of discovery.",
+                t: "Reliability over features.",
+                d: "A smaller product that works every time beats a feature-rich one that surprises you. We ship less and make it solid before moving on.",
               },
               {
-                t: "Product company discipline, services-firm flexibility.",
-                d: "The same people who designed our product line are on your team. The same engineers fix Lens bugs at midnight and your release at 5pm.",
+                t: "Tech should serve people.",
+                d: "Every decision we make is filtered through one question: does this make life easier for the person using it? If the answer is no, we rethink.",
               },
             ].map((b) => (
               <div key={b.t} className="card p-7">
@@ -87,72 +85,33 @@ export default function AboutPage() {
       <Section>
         <div className="container-x">
           <SectionHead
-            eyebrow="How we&rsquo;re set up"
-            title="A small founder-led core, and a senior freelance bench around it."
-            lede="Hontec is run by its founders, and one of them is on every engagement of consequence. Around them is a hand-picked bench of senior freelance engineers, designers and product folk we&rsquo;ve worked with for years — staffed only when their CV fits the brief."
+            eyebrow="What we do"
+            title="One product live, and custom software built to order."
           />
-          <div className="mt-12 grid md:grid-cols-2 gap-6">
-            {[
-              {
-                n: "Jagdish Parmar",
-                r: "Co-founder & CEO",
-                b: "Jagdish runs the product line and the commercial side of the firm. He&rsquo;s the person you&rsquo;ll meet first, and the person who&rsquo;ll still be on your QBR three years in. He believes the proposal is only as good as the engineer it names.",
-                roles: ["Product strategy", "Commercials & SOWs", "Client partnership"],
-              },
-              {
-                n: "Shubham Raiyani",
-                r: "Co-founder & CTO",
-                b: "Shubham runs engineering and architecture. He sets the technical bar for the bench, leads the toughest design reviews, and is the second escalation when something goes sideways at 2am. Distributed systems by trade, opinionated about boring tech for honest reasons.",
-                roles: ["Engineering & architecture", "Hiring bar", "On-call escalation"],
-              },
-            ].map((p) => (
-              <div key={p.n} className="card p-8 flex flex-col">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-ink text-white grid place-items-center font-mono text-base">
-                    {p.n.split(" ").map((s) => s[0]).join("")}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold tracking-tight">{p.n}</h3>
-                    <div className="text-sm text-mute">{p.r}</div>
-                  </div>
-                </div>
-                <p className="mt-6 text-[0.95rem] text-ink-3 leading-relaxed">{p.b}</p>
-                <div className="mt-6 pt-6 border-t border-line">
-                  <div className="text-xs text-mute uppercase tracking-[0.12em]">What he owns</div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {p.roles.map((r) => (
-                      <span key={r} className="chip">{r}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          <div className="mt-10 grid lg:grid-cols-2 gap-6">
+          <div className="mt-12 grid lg:grid-cols-2 gap-6">
             <div className="card p-8 bg-paper">
-              <Eyebrow>The bench</Eyebrow>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight">Senior freelancers we&rsquo;ve worked with for years.</h3>
+              <Eyebrow>Our product</Eyebrow>
+              <h3 className="mt-4 text-xl font-semibold tracking-tight">Pharmacare — built for Indian retail pharmacies.</h3>
               <p className="mt-4 text-ink-3 leading-relaxed">
-                Around the founders is a curated, remote network of independent senior engineers and designers. We staff only the people whose CV would convince you if you were hiring. No graduates billed at senior rates, no &lsquo;resource pool&rsquo; with a different name on the standup each month.
+                Our first product replaces manual registers and spreadsheets with modern pharmacy management software. Fast billing, real-time stock, expiry alerts, GST invoices, and sales reports — all in one place.
               </p>
               <ul className="mt-5 grid gap-2 text-[0.92rem] text-ink-3">
-                <li className="flex gap-2"><Arrow className="mt-1" /> Hand-picked per engagement, named on the SOW.</li>
-                <li className="flex gap-2"><Arrow className="mt-1" /> Same people from kickoff to handover, or you don&rsquo;t pay for the swap.</li>
-                <li className="flex gap-2"><Arrow className="mt-1" /> Distributed across time zones for client overlap.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> GST-ready invoices in under 30 seconds.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> Real-time stock levels with low-stock and expiry alerts.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> English interface, built for how Indian pharmacies work.</li>
               </ul>
             </div>
             <div className="card p-8 bg-paper">
-              <Eyebrow>Promises we make</Eyebrow>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight">Few, specific, and we keep them.</h3>
+              <Eyebrow>Custom engineering</Eyebrow>
+              <h3 className="mt-4 text-xl font-semibold tracking-tight">We build software for businesses that need something specific.</h3>
               <p className="mt-4 text-ink-3 leading-relaxed">
-                We don&rsquo;t hide behind methodology. Every engagement carries a small number of named, dated commitments and we deliver on them — or we credit your invoice.
+                When an off-the-shelf product isn&rsquo;t the right fit, we build the solution. Web apps, mobile apps, cloud infrastructure, AI integration — scoped clearly, delivered reliably.
               </p>
               <ul className="mt-5 grid gap-2 text-[0.92rem] text-ink-3">
-                <li className="flex gap-2"><Arrow className="mt-1" /> Reply within 2 working days, every time.</li>
-                <li className="flex gap-2"><Arrow className="mt-1" /> A named senior on the call, not an account manager.</li>
-                <li className="flex gap-2"><Arrow className="mt-1" /> Production-grade slice within the milestone you signed.</li>
-                <li className="flex gap-2"><Arrow className="mt-1" /> Code, infra, docs handed over — yours from day one.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> Clear scope and honest timelines from the start.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> Direct communication — you work with the people building it.</li>
+                <li className="flex gap-2"><Arrow className="mt-1" /> Reply within 2 working days on every enquiry.</li>
               </ul>
             </div>
           </div>
@@ -162,7 +121,7 @@ export default function AboutPage() {
               See open roles <Arrow />
             </Link>
             <Link href="/contact" className="btn btn-primary">
-              Meet the founders <Arrow />
+              Get in touch <Arrow />
             </Link>
           </div>
         </div>

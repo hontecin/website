@@ -3,30 +3,10 @@
 import { useState } from "react";
 import { Arrow } from "./ui";
 
-const intents = [
-  { value: "brief", label: "Brief us on a project" },
-  { value: "demo", label: "Book a product walkthrough" },
-  { value: "pricing", label: "Request product pricing" },
-  { value: "careers", label: "Careers / send me your CV" },
-  { value: "press", label: "Press or analyst enquiry" },
-  { value: "other", label: "Something else" },
-];
-
-const ranges = [
-  "Discovery (~$10–25k)",
-  "Pilot ($25–100k)",
-  "Build ($100–500k)",
-  "Programme ($500k+)",
-  "Not sure yet",
-];
-
-const timing = ["This quarter", "Next quarter", "In the next 6 months", "Exploring, no date"];
 
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [intent, setIntent] = useState("");
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
@@ -53,7 +33,7 @@ export function ContactForm() {
             </svg>
           </div>
           <h3 className="mt-5 text-2xl font-semibold tracking-tight">Got it. Reply on the way.</h3>
-          <p className="mt-2 text-ink-3 max-w-sm mx-auto">A real person from our team will be in touch within two working days. NDA on its way separately if you asked for one.</p>
+          <p className="mt-2 text-ink-3 max-w-sm mx-auto">A real person from our team will be in touch within two working days.</p>
         </div>
       ) : (
         <>
@@ -74,45 +54,17 @@ export function ContactForm() {
             </Field>
           </div>
           <Field label="What can we help with?" required>
-            <select className="input" name="intent" required defaultValue="" onChange={e => setIntent(e.target.value)}>
-              <option value="" disabled>Pick one</option>
-              {intents.map(i => <option key={i.value} value={i.value}>{i.label}</option>)}
-            </select>
+            <input className="input" name="intent" required placeholder="e.g. Project brief, product demo, pricing…" />
           </Field>
-          {intent === "careers" && (
-            <div className="rounded-xl border border-line bg-line-2 px-4 py-3 text-sm text-ink-3">
-              For careers, please email us directly at{" "}
-              <a href="mailto:careers.hontec@gmail.com" className="text-ink underline">careers.hontec@gmail.com</a>{" "}
-              with your CV.
-            </div>
-          )}
-          {intent !== "careers" && <><div className="grid sm:grid-cols-2 gap-5">
-            <Field label="Indicative budget">
-              <select className="input" name="budget" defaultValue="">
-                <option value="" disabled>Pick one (optional)</option>
-                {ranges.map(r => <option key={r} value={r}>{r}</option>)}
-              </select>
-            </Field>
-            <Field label="When are you hoping to start?">
-              <select className="input" name="timing" defaultValue="">
-                <option value="" disabled>Pick one (optional)</option>
-                {timing.map(r => <option key={r} value={r}>{r}</option>)}
-              </select>
-            </Field>
-          </div>
           <Field label="Tell us a bit more" required>
             <textarea className="input min-h-32" name="message" required placeholder="What are you trying to ship? What have you tried? What's the deadline?" />
           </Field>
-          <label className="flex items-start gap-3 text-sm text-ink-3">
-            <input type="checkbox" name="nda" className="mt-1" />
-            <span>Please send me your standard mutual NDA today.</span>
-          </label>
           <button type="submit" className="btn btn-primary self-start" disabled={submitting}>
             {submitting ? "Sending…" : "Send to Hontec"} <Arrow />
           </button>
           <p className="text-xs text-mute">
             By submitting you agree to our <a href="/privacy" className="underline">privacy notice</a>. We don&rsquo;t share form submissions with anyone.
-          </p></>}
+          </p>
         </>
       )}
 

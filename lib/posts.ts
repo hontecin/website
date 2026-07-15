@@ -16,7 +16,7 @@ export const posts: Post[] = [
     description:
       "What we learnt shipping ten production LLM features in regulated industries: a practical budget for evaluations, golden sets and regression tests.",
     date: "2026-05-14",
-    author: "Shubham Raiyani, CTO",
+    author: "Hontec Team",
     readingMins: 9,
     tag: "Applied AI",
     body: [
@@ -44,7 +44,7 @@ export const posts: Post[] = [
     description:
       "Three years of data from our platform-engineering engagements: what teams actually gain when they invest in golden paths, IDPs and paved roads — and what they lose if they don&rsquo;t.",
     date: "2026-03-22",
-    author: "Jagdish Parmar, CEO",
+    author: "Hontec Team",
     readingMins: 7,
     tag: "Platform",
     body: [

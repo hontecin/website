@@ -17,65 +17,69 @@ export default function Home() {
         <div className="absolute inset-0 grid-lines opacity-50 pointer-events-none" />
         <div className="absolute -top-32 -right-32 w-[40rem] h-[40rem] rounded-full bg-accent-soft/70 blur-3xl opacity-70 pointer-events-none" />
         <div className="container-x relative pt-20 md:pt-28 pb-20 md:pb-28">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-7">
-              <Eyebrow>Products · Custom software</Eyebrow>
+              <Eyebrow>Software products · Custom engineering</Eyebrow>
               <h1 className="h-display mt-5 text-balance">
-                Software that takes work off your team&apos;s plate.
+                Technology that empowers every business.
               </h1>
               <p className="lede mt-6 max-w-xl text-pretty">
-                Hontec builds two things. The first is our own product line — Pharmacare, Flow, Vault and Lens — used by pharmacies and supply networks, plus operations, compliance and finance teams who want to retire spreadsheets and one-off scripts. The second is custom software, built with your engineers on the calls they&apos;re already on.
+                Hontec is an IT company based in India, building software products and custom solutions for businesses of all sizes. We create technology that is simple, reliable, and built to grow with the people who use it.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link href="/contact?type=brief" className="btn btn-primary">
+                <Link href="/contact" className="btn btn-primary">
                   Start a project <Arrow />
                 </Link>
                 <Link href="/products" className="btn btn-ghost">
-                  See our products
+                  Our products
                 </Link>
               </div>
-              <p className="mt-6 text-sm text-mute">
-                Replies inside 2 working days · NDAs sent same-day · Remote-first team based in {site.address.city}, delivering globally.
-              </p>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="card p-6">
-                <div className="flex items-center justify-between">
-                  <Eyebrow>What we promise</Eyebrow>
-                  <span className="chip">Every engagement</span>
-                </div>
-                <div className="mt-6 grid grid-cols-2 gap-y-8 gap-x-6">
-                  {stats.map((s) => (
-                    <Stat key={s.label} value={s.value} label={s.label} />
-                  ))}
-                </div>
-                <div className="mt-6 pt-6 border-t border-line text-sm text-mute">
-                  These four commitments go into every SOW we sign. Miss one and we credit your invoice.
-                </div>
+              <div className="card p-7">
+                <Eyebrow>About Hontec</Eyebrow>
+                <ul className="mt-5 grid gap-5 text-[0.95rem]">
+                  <li className="flex flex-col gap-1">
+                    <span className="text-xs uppercase tracking-[0.12em] text-mute">Founded</span>
+                    <span className="font-medium text-ink">2024, Vadodara, Gujarat</span>
+                  </li>
+                  <li className="flex flex-col gap-1">
+                    <span className="text-xs uppercase tracking-[0.12em] text-mute">What we build</span>
+                    <span className="text-ink-3">Pharmacare — pharmacy management software, and custom software for businesses</span>
+                  </li>
+                  <li className="flex flex-col gap-1">
+                    <span className="text-xs uppercase tracking-[0.12em] text-mute">Mission</span>
+                    <span className="text-ink-3">Make powerful software accessible to every business</span>
+                  </li>
+                  <li className="flex flex-col gap-1">
+                    <span className="text-xs uppercase tracking-[0.12em] text-mute">Contact</span>
+                    <a href={`mailto:${site.email}`} className="text-ink hover:underline">{site.email}</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TRUST STRIP */}
+      {/* VISION STRIP */}
       <section className="border-b border-line bg-paper">
         <div className="container-x py-10">
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
             <p className="text-sm text-mute md:max-w-[14rem]">
-              Teams we ship with, from public lenders to Series-C SaaS:
+              What we stand for:
             </p>
-            <ul className="flex-1 flex flex-wrap items-center gap-x-10 gap-y-3 mask-fade-r">
+            <ul className="flex-1 flex flex-wrap items-center gap-x-10 gap-y-3">
               {[
-                "Lendingo",
-                "Hexabank",
-                "Hospitable",
-                "Northshore Retail",
-                "Polymath SaaS",
-                "Trustline",
-                "Adamant Logistics",
-                "Civica Health",
+                "Real Impact",
+                "Built to Last",
+                "India First",
+                "Honest Engineering",
+                "People Over Process",
+                "Purpose-Driven",
+                "Simplicity at Scale",
+                "Tech for Everyone",
               ].map((n) => (
                 <li key={n} className="uppercase tracking-[0.18em] text-[0.78rem] text-ink-3/70">
                   {n}
@@ -86,119 +90,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TWO PILLARS */}
-      <Section>
-        <div className="container-x">
-          <SectionHead
-            eyebrow="What we do"
-            title="Two ways we plug into your roadmap."
-            lede="Most of our clients use both — our products to retire categories of work, and our engineering teams to build the differentiated parts of their stack."
-          />
-
-          <div className="mt-14 grid md:grid-cols-2 gap-6">
-            <div className="card p-8 lg:p-10 group">
-              <Eyebrow>01 · Products</Eyebrow>
-              <h3 className="mt-5 text-2xl md:text-[1.75rem] font-semibold tracking-tight">
-                Our own software, deployed in weeks.
-              </h3>
-              <p className="mt-4 text-ink-3 leading-relaxed">
-                Four products built by our team for problems we kept seeing — fragmented pharmacy supply chains, approvals stuck in inboxes, documents scattered across drives, and operational data trapped in CSVs. You license what you need, integrate, and move on.
-              </p>
-              <ul className="mt-6 grid gap-3 text-[0.95rem]">
-                {products.map((p) => {
-                  const isExternal = "external" in p && p.external;
-                  const href = isExternal ? p.external! : `/products/${p.slug}`;
-                  return (
-                    <li key={p.slug}>
-                      <Link
-                        href={href}
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener" : undefined}
-                        className="flex items-start gap-3 group/item"
-                      >
-                        <span className="mt-1 inline-block w-1.5 h-1.5 rounded-full bg-accent" />
-                        <span className="flex-1">
-                          <span className="font-medium">{p.name}</span>
-                          <span className="text-mute"> — {p.tagline}</span>
-                        </span>
-                        <Arrow className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="mt-8">
-                <LinkArrow href="/products">Browse the product line</LinkArrow>
-              </div>
-            </div>
-
-            <div className="card p-8 lg:p-10 group">
-              <Eyebrow>02 · Custom software</Eyebrow>
-              <h3 className="mt-5 text-2xl md:text-[1.75rem] font-semibold tracking-tight">
-                Engineering teams that ship with yours.
-              </h3>
-              <p className="mt-4 text-ink-3 leading-relaxed">
-                Founder-led squads drawn from our senior freelance bench — engineers, designers, PMs — embedded into your delivery rhythm. Same standup, same Jira, same on-call rotation if you want it. Project-based, with promises in writing.
-              </p>
-              <ul className="mt-6 grid gap-3 text-[0.95rem]">
-                {services.map((s) => (
-                  <li key={s.slug}>
-                    <Link href={`/services/${s.slug}`} className="flex items-start gap-3 group/item">
-                      <span className="mt-1 inline-block w-1.5 h-1.5 rounded-full bg-ink" />
-                      <span className="flex-1">
-                        <span className="font-medium">{s.name}</span>
-                        <span className="text-mute"> — {s.short.split(" — ")[0]}</span>
-                      </span>
-                      <Arrow className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <LinkArrow href="/services">How custom engagements work</LinkArrow>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* PRODUCT SHOWCASE */}
       <Section className="bg-paper border-y border-line">
         <div className="container-x">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <SectionHead
-              eyebrow="The product line"
-              title={<>Four tools. One problem each. <span className="text-mute">Solved properly.</span></>}
-            />
-            <LinkArrow href="/products">Compare all three</LinkArrow>
-          </div>
+          <SectionHead
+            eyebrow="The product"
+            title={<>Pharmacare. <span className="text-mute">Modern pharmacy management.</span></>}
+          />
 
-          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((p, i) => {
+          <div className="mt-14">
+            {products.map((p) => {
               const isExternal = "external" in p && p.external;
               const href = isExternal ? p.external! : `/products/${p.slug}`;
-              const categories = ["Healthcare", "Workflow", "Documents", "Analytics"];
               return (
                 <Link
                   key={p.slug}
                   href={href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener" : undefined}
-                  className="card p-7 flex flex-col group"
+                  className="card p-8 md:p-10 flex flex-col md:flex-row gap-8 group"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="chip">{categories[i]}</span>
-                    <span className="text-[0.78rem] text-mute font-mono">/0{i + 1}</span>
+                  <div className="md:w-1/3">
+                    <span className="chip">Healthcare</span>
+                    <h3 className="mt-5 text-2xl md:text-3xl font-semibold tracking-tight">{p.name}</h3>
+                    <p className="mt-2 text-ink-3">{p.tagline}</p>
+                    <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink">
+                      Visit pharmacare.hontec.in <Arrow />
+                    </div>
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold tracking-tight">{p.name}</h3>
-                  <p className="mt-2 text-[0.95rem] text-ink-3">{p.tagline}</p>
-                  <p className="mt-4 text-sm text-mute leading-relaxed flex-1">{p.summary}</p>
-                  <div className="mt-6 pt-6 border-t border-line flex items-center justify-between">
-                    <span className="font-mono text-xs text-mute">{p.metrics[0].value}</span>
-                    <span className="text-sm text-mute">{p.metrics[0].label}</span>
-                  </div>
-                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink">
-                    {isExternal ? "Visit product site" : "Read the details"} <Arrow />
+                  <div className="md:w-2/3 md:border-l md:border-line md:pl-8">
+                    <p className="text-ink-3 leading-relaxed">{p.summary}</p>
+                    <div className="mt-6 grid grid-cols-3 gap-4">
+                      {p.metrics.map((m) => (
+                        <div key={m.label}>
+                          <div className="font-mono text-lg font-semibold tracking-tight">{m.value}</div>
+                          <div className="mt-1 text-[0.78rem] text-mute leading-tight">{m.label}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </Link>
               );
@@ -213,7 +142,7 @@ export default function Home() {
           <SectionHead
             eyebrow="Engineering capabilities"
             title="What our squads bring on day one."
-            lede="Senior-led, remote-first teams based out of India with delivery overlap from San Francisco to Singapore. We staff the engagement with people whose CVs you read first."
+            lede="Senior-led, remote-first teams based in India. We staff every engagement with experienced engineers who take full ownership of what they ship."
           />
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-2xl overflow-hidden">
@@ -271,48 +200,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* WORK */}
-      <Section>
-        <div className="container-x">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <SectionHead
-              eyebrow="Recent work"
-              title="Outcomes we can name — with permission."
-              lede="Three of the dozens of engagements we shipped this year. Each one is a write-up your CTO can defend in a board meeting."
-            />
-            <LinkArrow href="/work">See all case studies</LinkArrow>
-          </div>
-
-          <div className="mt-14 grid lg:grid-cols-3 gap-6">
-            {caseStudies.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/work/${c.slug}`}
-                className="card p-7 flex flex-col group"
-              >
-                <span className="chip">{c.industry}</span>
-                <h3 className="mt-6 text-xl font-semibold tracking-tight leading-snug">
-                  {c.title}
-                </h3>
-                <p className="mt-2 text-sm text-mute">{c.client}</p>
-                <p className="mt-4 text-[0.95rem] text-ink-3 leading-relaxed flex-1">{c.summary}</p>
-                <div className="mt-6 pt-6 border-t border-line grid grid-cols-3 gap-3">
-                  {c.metrics.map((m) => (
-                    <div key={m.label}>
-                      <div className="font-mono text-base font-semibold tracking-tight">{m.value}</div>
-                      <div className="text-[0.72rem] text-mute mt-1 leading-tight">{m.label}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium">
-                  Read the case study <Arrow />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* PROCESS */}
       <Section className="bg-paper border-y border-line">
         <div className="container-x">
@@ -348,115 +235,6 @@ export default function Home() {
                 <div className="font-mono text-xs text-mute">{step.n}</div>
                 <h3 className="mt-4 text-lg font-semibold tracking-tight">{step.t}</h3>
                 <p className="mt-3 text-[0.92rem] text-ink-3 leading-relaxed" dangerouslySetInnerHTML={{ __html: step.d }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* WHY HONTEC */}
-      <Section>
-        <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10">
-            <div className="lg:col-span-5">
-              <Eyebrow>Why Hontec</Eyebrow>
-              <h2 className="h-section mt-4 text-balance">
-                A different kind of services firm.
-              </h2>
-              <p className="lede mt-5 text-pretty">
-                A founder-led studio with a senior freelance bench. We make a small number of promises on every engagement and we deliver on them — that&apos;s the whole pitch.
-              </p>
-            </div>
-            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-              {[
-                {
-                  t: "Senior by default",
-                  d: "Every freelancer on our bench has 8+ years of production experience. We don&rsquo;t farm work out to graduates and call it &lsquo;the team.&rsquo;",
-                },
-                {
-                  t: "We staff the people you met",
-                  d: "A founder is on every engagement of consequence, and the freelancer in the standup is the one named on the SOW. Swap-outs need your written sign-off.",
-                },
-                {
-                  t: "Promises, not methodology",
-                  d: "Each engagement carries a few named, dated commitments. Miss one and we credit your invoice — written into every SOW we&rsquo;ve signed.",
-                },
-                {
-                  t: "Security taken seriously",
-                  d: "DPAs, BAAs, NDAs and customer-managed keys on request. We&rsquo;re honest about where we are on SOC 2 and ISO 27001 — ask us and we&rsquo;ll show you.",
-                },
-              ].map((b) => (
-                <div key={b.t} className="border-l border-line pl-5">
-                  <h3 className="font-semibold tracking-tight">{b.t}</h3>
-                  <p className="mt-2 text-[0.92rem] text-ink-3 leading-relaxed" dangerouslySetInnerHTML={{ __html: b.d }} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* TESTIMONIAL */}
-      <Section className="bg-ink text-white">
-        <div className="container-x">
-          <div className="max-w-4xl">
-            <Eyebrow>What a CTO said</Eyebrow>
-            <blockquote className="mt-6 text-2xl md:text-4xl font-display font-medium leading-[1.15] tracking-tight text-balance">
-              &ldquo;We&apos;ve worked with three large outsourcers in the last decade. Hontec is the first where the engineer on the standup actually wrote the code we&apos;re reviewing. That&apos;s the bar.&rdquo;
-            </blockquote>
-            <div className="mt-8 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-white/10 grid place-items-center font-mono text-sm">RV</div>
-              <div>
-                <div className="font-medium">R. Venkatraman</div>
-                <div className="text-sm text-white/60">CTO, Polymath SaaS · Series-C, US$ 1.2B valuation</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* FAQ */}
-      <Section>
-        <div className="container-x">
-          <SectionHead
-            eyebrow="Common questions"
-            title="What buyers ask us first."
-          />
-          <div className="mt-14 grid lg:grid-cols-2 gap-8">
-            {[
-              {
-                q: "Are you a product company or a services studio?",
-                a: "Both. We license our product line — Pharmacare, Flow, Vault and Lens — and we deliver custom software through a small founder-led core and a senior freelance bench. The product line keeps the engineering work sharp; the engineering work keeps the product line honest.",
-              },
-              {
-                q: "How small is too small for you to engage?",
-                a: "Our smallest engagement is a focused 6–8 week build with one or two senior engineers. Below that, you&rsquo;ll get better leverage from a freelancer marketplace, and we&rsquo;ll happily refer you to one.",
-              },
-              {
-                q: "Where is the team based?",
-                a: "We&rsquo;re a remote-first studio headquartered in Vadodara, Gujarat. The freelance bench is distributed across India and configured to overlap with US East, EU and APAC clients. We travel to clients for kickoff and quarterly business reviews.",
-              },
-              {
-                q: "Can we hire your engineers at the end?",
-                a: "Yes — there&rsquo;s a transition clause in every SOW. We&rsquo;d rather you hire our engineer than have them resent the engagement. We arrange the hand-over and step aside.",
-              },
-              {
-                q: "Do you sign DPAs, BAAs and NDAs?",
-                a: "Yes. We send our standard mutual NDA same-day on request, and we sign DPAs and BAAs without drama. Customer-managed keys and stricter handling are on the table — ask.",
-              },
-              {
-                q: "What does a discovery cost?",
-                a: "A two-week discovery is fixed price, scoped on a 30-minute call. It includes a build plan, infra &amp; cost model, risks register, and a written recommendation — including &lsquo;don&rsquo;t build this&rsquo; when that&rsquo;s the answer.",
-              },
-            ].map((f) => (
-              <div key={f.q} className="border-t border-line pt-6">
-                <div className="flex gap-3">
-                  <Tick />
-                  <div>
-                    <h3 className="font-semibold tracking-tight">{f.q}</h3>
-                    <p className="mt-2 text-[0.95rem] text-ink-3 leading-relaxed" dangerouslySetInnerHTML={{ __html: f.a }} />
-                  </div>
-                </div>
               </div>
             ))}
           </div>
