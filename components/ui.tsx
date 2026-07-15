@@ -125,9 +125,6 @@ export function CTAStrip({
             <Link href="/contact?type=brief" className="btn btn-accent">
               Start a project <Arrow />
             </Link>
-            <Link href="/work" className="btn btn-ghost text-white border-white/20 hover:border-white">
-              See recent work
-            </Link>
           </div>
         </div>
       </div>
